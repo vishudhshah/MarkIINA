@@ -124,3 +124,6 @@ out
 *.js.map
 *.css.map
 package-lock.json
+
+# IINA packed plugin archives
+*.iinaplgz

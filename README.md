@@ -4,7 +4,7 @@ A basic IINA bookmark plugin, with no dependencies or build step.
 
 ## Install
 
-In IINA Settings → Plugins, install from GitHub using `vishudhshah/MarkIINA`.
+In IINA Settings → Plugins, install from GitHub using `vishudhshah/MarkIINA`, or pick MarkIINA from IINA's community plugin list. Updates are checked against GitHub Releases.
 
 ## Install for development
 
@@ -40,6 +40,13 @@ node --test tests/bookmarks.test.cjs
 # Run pack from a directory whose path contains no spaces.
 # Supply the plugin folder through a relative path or temporary symlink.
 /Applications/IINA.app/Contents/MacOS/iina-plugin pack MarkIINA
+```
+
+Publish a release so IINA's update checker sees it:
+
+```sh
+git tag vX.Y.Z
+gh release create vX.Y.Z ../MarkIINA-X.Y.Z.iinaplgz --generate-notes
 ```
 
 Manual check in IINA: add an unnamed and named bookmark, jump to both, delete one, open another video to check isolation, then quit/reopen IINA and reopen the first video to check persistence. Also check Cancel and an empty name in the naming dialog.
